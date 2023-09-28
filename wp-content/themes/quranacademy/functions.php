@@ -39,3 +39,22 @@ function allow_svg_upload($mimes)
     return $mimes;
 }
 add_filter('upload_mimes', 'allow_svg_upload');
+
+
+add_theme_support('title-tag');
+add_theme_support('custom-logo');
+
+function add_nav_menus()
+{
+    register_nav_menus(array(
+        'nav menu' => 'Navigation Bar',
+    ));
+}
+add_action('init', 'add_nav_menus');
+
+
+function coder_extend_excerpt_length($length)
+{
+    return 15;
+}
+add_filter('excerpt_length', 'coder_extend_excerpt_length');

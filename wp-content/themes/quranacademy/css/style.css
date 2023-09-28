@@ -6,6 +6,19 @@ body {
   text-align: center;
   margin-bottom: 3rem;
 }
+.main-title h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.main-title h2::before, .main-title h2::after {
+  content: url("../images/icons/title.svg");
+  margin: 0 10px;
+  height: 30px;
+}
 
 nav.navbar {
   background-color: #39957A;
@@ -304,14 +317,13 @@ section.packages .package ul li {
 }
 section.packages .package ul li:last-of-type {
   margin-bottom: 0;
-  border-radius: 0 0 20px 20px;
 }
 section.packages .package .bottom {
   border: 1px solid #212833;
   border-top: 0;
-  border-radius: 0 0 50% 50%;
-  padding-bottom: 60px;
-  padding-top: 40px;
+  border-radius: 0 0 25px 25px;
+  padding-bottom: 25px;
+  padding-top: 25px;
   background-image: url("../images/bgs/01.png");
   background-repeat: no-repeat;
 }
@@ -343,13 +355,48 @@ section.blogs .single-blog img {
 section.blogs .single-blog .text {
   padding: 20px;
 }
+section.blogs .single-blog .text a {
+  text-decoration: none;
+}
 section.blogs .single-blog .text h3 {
   color: #39957A;
   font-size: 20px;
+  max-height: 3em;
+  overflow: hidden;
+  line-height: 1.2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 section.blogs .single-blog .text p {
   font-size: 14px;
   margin-bottom: 0;
+}
+section.blogs .blogs-btn {
+  background-color: #39957A;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.3);
+  margin-top: 25px;
+}
+section.blogs .blogs-btn:hover {
+  background-color: #000;
+  color: #F9BC61;
+}
+
+section.single-post {
+  padding: 5rem 0;
+}
+section.single-post .single-image {
+  margin-bottom: 20px;
+}
+section.single-post .single-image img {
+  width: 100%;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
 }
 
 section.contact {
@@ -411,6 +458,17 @@ section.contact .info .email {
 section.contact .info .whatsapp {
   background-color: #39957A;
 }
+section.contact .submit-btn {
+  background-color: #39957A;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.3);
+}
+section.contact .submit-btn:hover {
+  background-color: #F9BC61;
+}
 
 footer {
   background-color: #39957A;
@@ -420,4 +478,23 @@ footer {
 footer p {
   margin-bottom: 0;
   color: #fff;
+}
+
+@media (max-width: 991px) {
+  section.offers .offer {
+    margin-bottom: 25px;
+  }
+  section.counter .counter-box {
+    margin-bottom: 25px;
+  }
+  section.packages .package {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  section.blogs .single-blog {
+    margin-bottom: 25px;
+  }
+  .contact-form {
+    margin-bottom: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
